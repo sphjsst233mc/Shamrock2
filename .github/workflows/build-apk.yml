@@ -28,9 +28,6 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
 
-      - name: Accept Android SDK licenses
-        run: yes | $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager --licenses
-
       - name: Setup cmake
         run: |
           echo "ANDROID_HOME=$ANDROID_SDK_ROOT" >> $GITHUB_ENV
